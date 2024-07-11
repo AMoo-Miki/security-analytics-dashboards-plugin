@@ -9,7 +9,7 @@ import {
   EuiCheckableCard,
   EuiCompressedCheckboxGroup,
   EuiCompressedFieldText,
-  EuiFilePicker,
+  EuiCompressedFilePicker,
   EuiFlexGroup,
   EuiFlexItem,
   EuiFormLabel,
@@ -367,7 +367,7 @@ export const AddThreatIntelSource: React.FC<AddThreatIntelSourceProps> = ({
               isInvalid={!!fileError}
               error={fileError}
             >
-              <EuiFilePicker
+              <EuiCompressedFilePicker
                 id={'filePickerId'}
                 fullWidth
                 initialPromptText="Select or drag and drop a file"
