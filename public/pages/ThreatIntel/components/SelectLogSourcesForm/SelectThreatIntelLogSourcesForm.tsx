@@ -9,7 +9,7 @@ import {
   EuiSmallButton,
   EuiSmallButtonEmpty,
   EuiCompressedCheckbox,
-  EuiComboBox,
+  EuiCompressedComboBox,
   EuiComboBoxOptionOption,
   EuiFlexGroup,
   EuiFlexItem,
@@ -182,7 +182,7 @@ export const SelectThreatIntelLogSources: React.FC<SelectThreatIntelLogSourcesPr
         label="Select Indexes/Aliases"
         helpText="Using indexes and aliases is recommended for more precise field mapping"
       >
-        <EuiComboBox
+        <EuiCompressedComboBox
           options={logSourceOptions}
           placeholder={'Select an input source for the detector.'}
           isLoading={loadingLogSourceOptions}
@@ -287,7 +287,7 @@ export const SelectThreatIntelLogSources: React.FC<SelectThreatIntelLogSourcesPr
                                   iocInfoWithAddFieldOpen.ioc === ioc
                                 }
                               >
-                                <EuiComboBox
+                                <EuiCompressedComboBox
                                   style={{ minWidth: 300 }}
                                   options={logSourceMappingByName[source.name]}
                                   onChange={(options) =>
