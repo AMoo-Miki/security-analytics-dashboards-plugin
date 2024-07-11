@@ -10,7 +10,7 @@ import { BREADCRUMBS, DEFAULT_EMPTY_DATA, ROUTES } from '../../../../utils/const
 import { useEffect } from 'react';
 import { CoreServicesContext } from '../../../../components/core_services';
 import {
-  EuiButton,
+  EuiSmallButton,
   EuiFlexGroup,
   EuiFlexItem,
   EuiLoadingContent,
@@ -153,15 +153,15 @@ export const ThreatIntelSource: React.FC<ThreatIntelSource> = ({
           <EuiFlexGroup alignItems="center">
             {type === 'S3_CUSTOM' && (
               <EuiFlexItem grow={false}>
-                <EuiButton fill onClick={onRefresh}>
+                <EuiSmallButton fill onClick={onRefresh}>
                   Refresh
-                </EuiButton>
+                </EuiSmallButton>
               </EuiFlexItem>
             )}
             <EuiFlexItem grow={false}>
-              <EuiButton color="danger" onClick={onDeleteButtonClick}>
+              <EuiSmallButton color="danger" onClick={onDeleteButtonClick}>
                 Delete
-              </EuiButton>
+              </EuiSmallButton>
             </EuiFlexItem>
           </EuiFlexGroup>
         </EuiFlexItem>

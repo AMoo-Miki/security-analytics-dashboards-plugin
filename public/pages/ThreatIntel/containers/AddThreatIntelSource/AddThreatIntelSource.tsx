@@ -5,7 +5,7 @@
 
 import React, { useContext, useEffect, useState } from 'react';
 import {
-  EuiButton,
+  EuiSmallButton,
   EuiCheckableCard,
   EuiCheckboxGroup,
   EuiFieldText,
@@ -320,7 +320,7 @@ export const AddThreatIntelSource: React.FC<AddThreatIntelSourceProps> = ({
               />
             </EuiFormRow>
             <EuiSpacer />
-            {/* <EuiButton>Test connection</EuiButton>
+            {/* <EuiSmallButton>Test connection</EuiSmallButton>
             <EuiSpacer /> */}
             <EuiText>
               <h4>Download schedule</h4>
@@ -396,12 +396,12 @@ export const AddThreatIntelSource: React.FC<AddThreatIntelSourceProps> = ({
       <EuiSpacer />
       <EuiFlexGroup justifyContent="flexEnd">
         <EuiFlexItem grow={false}>
-          <EuiButton onClick={() => history.push(ROUTES.THREAT_INTEL_OVERVIEW)}>Cancel</EuiButton>
+          <EuiSmallButton onClick={() => history.push(ROUTES.THREAT_INTEL_OVERVIEW)}>Cancel</EuiSmallButton>
         </EuiFlexItem>
         <EuiFlexItem grow={false}>
-          <EuiButton isLoading={submitInProgress} fill onClick={onSubmit}>
+          <EuiSmallButton isLoading={submitInProgress} fill onClick={onSubmit}>
             Add threat intel source
-          </EuiButton>
+          </EuiSmallButton>
         </EuiFlexItem>
       </EuiFlexGroup>
     </>

@@ -6,7 +6,7 @@
 import React, { useEffect, useState } from 'react';
 import {
   EuiBottomBar,
-  EuiButton,
+  EuiSmallButton,
   EuiCheckboxGroup,
   EuiFieldText,
   EuiFilePicker,
@@ -345,12 +345,12 @@ export const ThreatIntelSourceDetails: React.FC<ThreatIntelSourceDetailsProps> =
             <EuiSpacer />
           </EuiFlexItem>
           <EuiFlexItem grow={false}>
-            <EuiButton
+            <EuiSmallButton
               style={{ visibility: isReadOnly ? 'visible' : 'hidden' }}
               onClick={() => setIsReadOnly(false)}
             >
               Edit
-            </EuiButton>
+            </EuiSmallButton>
           </EuiFlexItem>
         </EuiFlexGroup>
       </EuiPanel>
@@ -358,12 +358,12 @@ export const ThreatIntelSourceDetails: React.FC<ThreatIntelSourceDetailsProps> =
         <EuiBottomBar>
           <EuiFlexGroup justifyContent="flexEnd">
             <EuiFlexItem grow={false}>
-              <EuiButton onClick={onDiscard}>Discard</EuiButton>
+              <EuiSmallButton onClick={onDiscard}>Discard</EuiSmallButton>
             </EuiFlexItem>
             <EuiFlexItem grow={false}>
-              <EuiButton isLoading={saveInProgress} fill onClick={onSave} disabled={saveDisabled}>
+              <EuiSmallButton isLoading={saveInProgress} fill onClick={onSave} disabled={saveDisabled}>
                 Save
-              </EuiButton>
+              </EuiSmallButton>
             </EuiFlexItem>
           </EuiFlexGroup>
         </EuiBottomBar>
