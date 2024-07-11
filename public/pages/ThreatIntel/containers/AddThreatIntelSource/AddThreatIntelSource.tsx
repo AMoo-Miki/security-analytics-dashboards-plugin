@@ -13,7 +13,7 @@ import {
   EuiFlexGroup,
   EuiFlexItem,
   EuiFormLabel,
-  EuiFormRow,
+  EuiCompressedFormRow,
   EuiPanel,
   EuiSpacer,
   EuiSwitch,
@@ -203,11 +203,11 @@ export const AddThreatIntelSource: React.FC<AddThreatIntelSourceProps> = ({
           <h4>Details</h4>
         </EuiText>
         <EuiSpacer />
-        <EuiFormRow label="Name">
+        <EuiCompressedFormRow label="Name">
           <EuiFieldText placeholder="Title" onChange={onNameChange} value={source.name} />
-        </EuiFormRow>
+        </EuiCompressedFormRow>
         <EuiSpacer />
-        <EuiFormRow
+        <EuiCompressedFormRow
           label={
             <>
               {'Description - '}
@@ -220,7 +220,7 @@ export const AddThreatIntelSource: React.FC<AddThreatIntelSourceProps> = ({
             onChange={onDescriptionChange}
             value={source.description}
           />
-        </EuiFormRow>
+        </EuiCompressedFormRow>
         <EuiSpacer />
         <EuiText size="xs">
           <b>Threat intel source type</b>
@@ -277,7 +277,7 @@ export const AddThreatIntelSource: React.FC<AddThreatIntelSourceProps> = ({
               <h4>Connection details</h4>
             </EuiText>
             <EuiSpacer />
-            <EuiFormRow
+            <EuiCompressedFormRow
               label={
                 <>
                   <EuiFormLabel>IAM Role ARN</EuiFormLabel>
@@ -294,31 +294,31 @@ export const AddThreatIntelSource: React.FC<AddThreatIntelSourceProps> = ({
                 onChange={(event) => onS3DataChange('role_arn', event.target.value)}
                 value={s3ConnectionDetails.s3.role_arn}
               />
-            </EuiFormRow>
+            </EuiCompressedFormRow>
             <EuiSpacer />
-            <EuiFormRow label="S3 bucket directory">
+            <EuiCompressedFormRow label="S3 bucket directory">
               <EuiFieldText
                 placeholder="S3 bucket name"
                 onChange={(event) => onS3DataChange('bucket_name', event.target.value)}
                 value={s3ConnectionDetails.s3.bucket_name}
               />
-            </EuiFormRow>
+            </EuiCompressedFormRow>
             <EuiSpacer />
-            <EuiFormRow label="Specify a directory or file">
+            <EuiCompressedFormRow label="Specify a directory or file">
               <EuiFieldText
                 placeholder="Object key"
                 onChange={(event) => onS3DataChange('object_key', event.target.value)}
                 value={s3ConnectionDetails.s3.object_key}
               />
-            </EuiFormRow>
+            </EuiCompressedFormRow>
             <EuiSpacer />
-            <EuiFormRow label="Region">
+            <EuiCompressedFormRow label="Region">
               <EuiFieldText
                 placeholder="Region"
                 onChange={(event) => onS3DataChange('region', event.target.value)}
                 value={s3ConnectionDetails.s3.region}
               />
-            </EuiFormRow>
+            </EuiCompressedFormRow>
             <EuiSpacer />
             {/* <EuiSmallButton>Test connection</EuiSmallButton>
             <EuiSpacer /> */}
@@ -356,7 +356,7 @@ export const AddThreatIntelSource: React.FC<AddThreatIntelSourceProps> = ({
               <h4>Upload a file</h4>
             </EuiText>
             <EuiSpacer />
-            <EuiFormRow
+            <EuiCompressedFormRow
               label="File"
               helpText={
                 <>
@@ -378,7 +378,7 @@ export const AddThreatIntelSource: React.FC<AddThreatIntelSourceProps> = ({
                 isInvalid={!!fileError}
                 data-test-subj="import_ioc_file"
               />
-            </EuiFormRow>
+            </EuiCompressedFormRow>
             <EuiSpacer />
           </>
         )}

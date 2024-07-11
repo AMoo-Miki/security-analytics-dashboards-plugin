@@ -13,7 +13,7 @@ import {
   EuiComboBoxOptionOption,
   EuiFlexGroup,
   EuiFlexItem,
-  EuiFormRow,
+  EuiCompressedFormRow,
   EuiPanel,
   EuiPopover,
   EuiSpacer,
@@ -178,7 +178,7 @@ export const SelectThreatIntelLogSources: React.FC<SelectThreatIntelLogSourcesPr
         <h2>Configure logs scan</h2>
       </EuiTitle>
       <EuiSpacer />
-      <EuiFormRow
+      <EuiCompressedFormRow
         label="Select Indexes/Aliases"
         helpText="Using indexes and aliases is recommended for more precise field mapping"
       >
@@ -194,7 +194,7 @@ export const SelectThreatIntelLogSources: React.FC<SelectThreatIntelLogSourcesPr
             return option.index ? `${option.label} (${option.index})` : option.label;
           }}
         />
-      </EuiFormRow>
+      </EuiCompressedFormRow>
       <EuiSpacer size="xxl" />
       <EuiTitle size="s">
         <h4>Select fields to scan</h4>
