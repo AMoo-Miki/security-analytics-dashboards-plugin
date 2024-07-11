@@ -5,7 +5,7 @@
 
 import {
   EuiAccordion,
-  EuiButtonIcon,
+  EuiSmallButtonIcon,
   EuiComboBox,
   EuiComboBoxOptionOption,
   EuiFieldText,
@@ -99,7 +99,7 @@ export const ThreatIntelAlertTriggerForm: React.FC<ThreatIntelAlertTriggerProps>
       id="threat-intel-trigger"
       initialIsOpen={true}
       buttonContent={trigger.name}
-      extraAction={<EuiButtonIcon iconType={'trash'} onClick={onDeleteTrgger} />}
+      extraAction={<EuiSmallButtonIcon iconType={'trash'} onClick={onDeleteTrgger} />}
       paddingSize="l"
     >
       <EuiFormRow>
