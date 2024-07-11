@@ -8,7 +8,7 @@ import {
   EuiBottomBar,
   EuiSmallButton,
   EuiCheckboxGroup,
-  EuiFieldText,
+  EuiCompressedFieldText,
   EuiFilePicker,
   EuiFlexGroup,
   EuiFlexItem,
@@ -207,11 +207,11 @@ export const ThreatIntelSourceDetails: React.FC<ThreatIntelSourceDetailsProps> =
           </EuiFlexItem>
           <EuiFlexItem grow={2}>
             <EuiCompressedFormRow label="Name">
-              <EuiFieldText readOnly={isReadOnly} value={name} onChange={onNameChange} />
+              <EuiCompressedFieldText readOnly={isReadOnly} value={name} onChange={onNameChange} />
             </EuiCompressedFormRow>
             <EuiSpacer />
             <EuiCompressedFormRow label="Description">
-              <EuiFieldText
+              <EuiCompressedFieldText
                 readOnly={isReadOnly}
                 value={description}
                 onChange={onDescriptionChange}
@@ -254,7 +254,7 @@ export const ThreatIntelSourceDetails: React.FC<ThreatIntelSourceDetailsProps> =
                 </EuiText>
                 <EuiSpacer />
                 <EuiCompressedFormRow label={<EuiFormLabel>IAM Role ARN</EuiFormLabel>}>
-                  <EuiFieldText
+                  <EuiCompressedFieldText
                     readOnly={isReadOnly}
                     placeholder="arn:"
                     onChange={(event) => onS3DataChange('role_arn', event.target.value)}
@@ -263,7 +263,7 @@ export const ThreatIntelSourceDetails: React.FC<ThreatIntelSourceDetailsProps> =
                 </EuiCompressedFormRow>
                 <EuiSpacer />
                 <EuiCompressedFormRow label="S3 bucket directory">
-                  <EuiFieldText
+                  <EuiCompressedFieldText
                     readOnly={isReadOnly}
                     placeholder="S3 bucket name"
                     onChange={(event) => onS3DataChange('bucket_name', event.target.value)}
@@ -272,7 +272,7 @@ export const ThreatIntelSourceDetails: React.FC<ThreatIntelSourceDetailsProps> =
                 </EuiCompressedFormRow>
                 <EuiSpacer />
                 <EuiCompressedFormRow label="Specify a directory or file">
-                  <EuiFieldText
+                  <EuiCompressedFieldText
                     readOnly={isReadOnly}
                     placeholder="Object key"
                     onChange={(event) => onS3DataChange('object_key', event.target.value)}
@@ -281,7 +281,7 @@ export const ThreatIntelSourceDetails: React.FC<ThreatIntelSourceDetailsProps> =
                 </EuiCompressedFormRow>
                 <EuiSpacer />
                 <EuiCompressedFormRow label="Region">
-                  <EuiFieldText
+                  <EuiCompressedFieldText
                     readOnly={isReadOnly}
                     placeholder="Region"
                     onChange={(event) => onS3DataChange('region', event.target.value)}
@@ -295,7 +295,7 @@ export const ThreatIntelSourceDetails: React.FC<ThreatIntelSourceDetailsProps> =
               <>
                 {isReadOnly && (
                   <EuiCompressedFormRow label="Uploaded file">
-                    <EuiFieldText
+                    <EuiCompressedFieldText
                       readOnly={isReadOnly}
                       value={fileUploadSource.ioc_upload?.file_name}
                       icon={'download'}

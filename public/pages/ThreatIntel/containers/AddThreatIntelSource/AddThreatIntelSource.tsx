@@ -8,7 +8,7 @@ import {
   EuiSmallButton,
   EuiCheckableCard,
   EuiCheckboxGroup,
-  EuiFieldText,
+  EuiCompressedFieldText,
   EuiFilePicker,
   EuiFlexGroup,
   EuiFlexItem,
@@ -204,7 +204,7 @@ export const AddThreatIntelSource: React.FC<AddThreatIntelSourceProps> = ({
         </EuiText>
         <EuiSpacer />
         <EuiCompressedFormRow label="Name">
-          <EuiFieldText placeholder="Title" onChange={onNameChange} value={source.name} />
+          <EuiCompressedFieldText placeholder="Title" onChange={onNameChange} value={source.name} />
         </EuiCompressedFormRow>
         <EuiSpacer />
         <EuiCompressedFormRow
@@ -215,7 +215,7 @@ export const AddThreatIntelSource: React.FC<AddThreatIntelSourceProps> = ({
             </>
           }
         >
-          <EuiFieldText
+          <EuiCompressedFieldText
             placeholder="Description"
             onChange={onDescriptionChange}
             value={source.description}
@@ -289,7 +289,7 @@ export const AddThreatIntelSource: React.FC<AddThreatIntelSourceProps> = ({
                 </>
               }
             >
-              <EuiFieldText
+              <EuiCompressedFieldText
                 placeholder="arn:"
                 onChange={(event) => onS3DataChange('role_arn', event.target.value)}
                 value={s3ConnectionDetails.s3.role_arn}
@@ -297,7 +297,7 @@ export const AddThreatIntelSource: React.FC<AddThreatIntelSourceProps> = ({
             </EuiCompressedFormRow>
             <EuiSpacer />
             <EuiCompressedFormRow label="S3 bucket directory">
-              <EuiFieldText
+              <EuiCompressedFieldText
                 placeholder="S3 bucket name"
                 onChange={(event) => onS3DataChange('bucket_name', event.target.value)}
                 value={s3ConnectionDetails.s3.bucket_name}
@@ -305,7 +305,7 @@ export const AddThreatIntelSource: React.FC<AddThreatIntelSourceProps> = ({
             </EuiCompressedFormRow>
             <EuiSpacer />
             <EuiCompressedFormRow label="Specify a directory or file">
-              <EuiFieldText
+              <EuiCompressedFieldText
                 placeholder="Object key"
                 onChange={(event) => onS3DataChange('object_key', event.target.value)}
                 value={s3ConnectionDetails.s3.object_key}
@@ -313,7 +313,7 @@ export const AddThreatIntelSource: React.FC<AddThreatIntelSourceProps> = ({
             </EuiCompressedFormRow>
             <EuiSpacer />
             <EuiCompressedFormRow label="Region">
-              <EuiFieldText
+              <EuiCompressedFieldText
                 placeholder="Region"
                 onChange={(event) => onS3DataChange('region', event.target.value)}
                 value={s3ConnectionDetails.s3.region}
