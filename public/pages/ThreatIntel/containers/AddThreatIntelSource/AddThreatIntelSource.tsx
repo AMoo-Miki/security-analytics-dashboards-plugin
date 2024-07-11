@@ -7,7 +7,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import {
   EuiSmallButton,
   EuiCheckableCard,
-  EuiCheckboxGroup,
+  EuiCompressedCheckboxGroup,
   EuiCompressedFieldText,
   EuiFilePicker,
   EuiFlexGroup,
@@ -386,7 +386,7 @@ export const AddThreatIntelSource: React.FC<AddThreatIntelSourceProps> = ({
           <h4>Types of malicious indicators</h4>
         </EuiText>
         <EuiSpacer />
-        <EuiCheckboxGroup
+        <EuiCompressedCheckboxGroup
           options={checkboxes}
           idToSelectedMap={checkboxIdToSelectedMap}
           onChange={onIocTypesChange}

@@ -8,7 +8,7 @@ import {
   EuiBadge,
   EuiSmallButton,
   EuiSmallButtonEmpty,
-  EuiCheckbox,
+  EuiCompressedCheckbox,
   EuiComboBox,
   EuiComboBoxOptionOption,
   EuiFlexGroup,
@@ -239,7 +239,7 @@ export const SelectThreatIntelLogSources: React.FC<SelectThreatIntelLogSourcesPr
                     return (
                       <EuiFlexGroup key={ioc} alignItems="center" gutterSize="s">
                         <EuiFlexItem grow={1}>
-                          <EuiCheckbox
+                          <EuiCompressedCheckbox
                             id={`${name}-${ioc}`}
                             label={IocLabel[ioc]}
                             checked={iocEnabled}
